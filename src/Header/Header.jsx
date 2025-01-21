@@ -22,7 +22,7 @@ function Header(props){
             <h1><img className={styles.imglogo} src={Logo}></img></h1>
             <nav className={styles.navbar}>
                 <ul>
-                    <li><Link to="/"  className={activePage === "home" ? styles.active : ""}
+                    <li><Link to="/react-app"  className={activePage === "home" ? styles.active : ""}
                                 onClick={() => handleNavClick("home")}>Home</Link></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Tour Packages</a></li>

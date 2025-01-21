@@ -25,7 +25,7 @@ function App() {
     <>
     <Router>
       <Header isLoggedIn={true} username='Soukhya'/> <Routes>
-                <Route path="/" element={<Home/>} />
+                <Route path="/react-app" element={<Home/>} />
                 <Route path="/testimonials" element={<Testimonials />} />
             </Routes>
       </Router>
