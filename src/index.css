@@ -1,0 +1,11 @@
+*{
+  background-color:rgb(222, 225, 228);
+  font-family:'Trebuchet MS';
+}
+
+* {
+  margin: 0; /* Remove all margins around the body */
+  padding: 0; /* Remove all padding around the body */
+  /* margin-bottom: 15px; */
+}
+

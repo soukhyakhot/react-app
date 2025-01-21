@@ -1,0 +1,80 @@
+.headercls {
+    display: flex;
+    align-items: center; /* Align items vertically to the center */
+    /* justify-content: space-between; */
+    /* gap: 16px; */
+    /* margin-top: 0px; */
+    flex-wrap: wrap;
+}
+
+.imglogo{
+    width: 180px;
+    height: 180px;
+    margin: 0;
+    padding: 0;
+    display: block
+}
+
+.navbar {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul{
+    list-style-type: none;
+    /* background-color:rgb(129, 174, 211); */
+    /* padding: 20px; */
+    margin: 20px;
+    display: flex;
+    gap: 16px;
+    /* overflow: hidden; */
+    
+}
+
+.navbar a{
+    text-decoration: none;
+    padding: 10px 20px;
+    /* padding-left: 10px; */
+    /* padding-top: 60px; */
+    display: block;
+    border-radius: 3px;
+    text-align: center;
+    color: rgb(21, 23, 47);
+    font-size: 18px;
+    color: rgb(0, 89, 119);
+}
+
+
+.navbar li{
+    float: left;
+    /* size: 20px; */
+    /* font-size: 18px; */
+}
+
+.navbar a:hover{
+    background-color:rgb(203, 213, 226);
+}
+
+.loginimg{
+    width: 50px;
+    height: 50px;
+    padding-left: 230px;
+    color: rgb(0, 89, 119);
+
+}
+
+.welcomemsg{
+    font-size: 17px;
+    color: rgb(49, 66, 90);
+    padding-left: 190px;
+}
+
+.navbar .active {
+    /* background-color: rgba(115, 178, 250, 0.68); */
+    color: rgb(3, 28, 37); /* Text color for highlighted item */
+    /* text-underline-position: auto; */
+    font-weight: bold;
+}
+
