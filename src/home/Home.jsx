@@ -1,5 +1,5 @@
 
-import Card from "D:/ReactApp/react-app/src/card/Card.jsx"
+import Card from "../card/Card.jsx"
 import Places from "../places/Places.jsx"
 import Rajasthan from "../assets/Rajasthan.jpg"
 import Andaman from "../assets/Andaman.jpg"
