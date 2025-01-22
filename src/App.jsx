@@ -11,6 +11,8 @@ import Kashmir from "./assets/Kashmir.jpg"
 import Maharashtra from "./assets/Maharashtra.jpg"
 import Testimonials from "./testimonials/Testimonials.jsx";
 import AboutUs from "./aboutUs/AboutUs.jsx";
+import TourPackages from "./tourPackages/TourPackages.jsx";
+import ContactUs from "./contactUs/ContactUs.jsx";
 
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
                 <Route path="/react-app" element={<Home/>} />
                 <Route path="/testimonials" element={<Testimonials />} />
                 <Route path="/aboutus" element={<AboutUs />} />
+                <Route path="/tourpackages" element={<TourPackages />} />
+                <Route path="/contactus" element={<ContactUs />} />
             </Routes>
       </Router>
       
