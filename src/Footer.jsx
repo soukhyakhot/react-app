@@ -1,7 +1,14 @@
 
+
 function Footer(){
+
+    const styles = {
+        fotterstyle: {
+            clear: 'both',
+        },}
+
     return(
-        <footer>
+        <footer className={styles.fotterstyle}>
             <p>©️ AtoZ Travels Pvt. Ltd.</p>
         </footer>
     );

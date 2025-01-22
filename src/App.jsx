@@ -10,6 +10,7 @@ import Kerala from "./assets/Kerala.jpg"
 import Kashmir from "./assets/Kashmir.jpg"
 import Maharashtra from "./assets/Maharashtra.jpg"
 import Testimonials from "./testimonials/Testimonials.jsx";
+import AboutUs from "./aboutUs/AboutUs.jsx";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Header isLoggedIn={true} username='Soukhya'/> <Routes>
                 <Route path="/react-app" element={<Home/>} />
                 <Route path="/testimonials" element={<Testimonials />} />
+                <Route path="/aboutus" element={<AboutUs />} />
             </Routes>
       </Router>
       

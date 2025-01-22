@@ -8,13 +8,14 @@ import React, { useState } from "react";
 function Header(props){
     
     const [activePage, setActivePage] = useState("home");
-    const welcomeMessage = <p className = {styles.welcomemsg}>Welcome {props.username}!</p>
     
-    const loginPrompt = <p className = {styles.welcomemsg}>Login</p>
-
     const handleNavClick = (page) => {
         setActivePage(page);
     };
+
+    const welcomeMessage = <p className = {styles.welcomemsg}>Welcome {props.username}!</p>
+    
+    const loginPrompt = <p className = {styles.welcomemsg}>Login</p>
 
     return(
         <>
@@ -24,7 +25,8 @@ function Header(props){
                 <ul>
                     <li><Link to="/react-app"  className={activePage === "home" ? styles.active : ""}
                                 onClick={() => handleNavClick("home")}>Home</Link></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><Link to="/aboutus" className={activePage === "aboutus" ? styles.active : ""}
+                                onClick={() => handleNavClick("aboutus")}>About Us</Link></li>
                     <li><a href="#">Tour Packages</a></li>
                     <li><Link target = "_blank" to="https://www.goindigo.in/">Air Tickets</Link></li>
                     <li><Link to="/testimonials" className={activePage === "testimonials" ? styles.active : ""}
