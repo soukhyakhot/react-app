@@ -8,10 +8,17 @@ function Wishlist(){
 
     function handleAddPlace (){
 
-        const newPlace = document.getElementById("placeInput").value;
+        const newPlace = document.getElementById("placeInput").value.trim();
         document.getElementById("placeInput").value = "";
 
-        setPlaces(f => [...f, newPlace]);
+        if (newPlace === "") {
+            alert("Please enter a valid place name before adding.");
+            return;
+        }
+        
+        setPlaces((p) => [...p, newPlace])
+
+        
     }
 
     function handleRemovePlace (index){
