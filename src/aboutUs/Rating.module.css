@@ -1,4 +1,5 @@
 /* .bgcolor{
+    display: block;
     background-color: rgb(200, 219, 238);
 } */
 
@@ -6,10 +7,11 @@
 .heading{
     /* text-align: left; */
     color: rgb(1, 72, 95);
+    padding-top: 15px;
     padding-bottom: 10px;
     font-size:25px;
     display: block; 
-    background-color: rgb(200, 219, 238);
+    /* background-color: rgb(200, 219, 238); */
 }
 
 
@@ -22,7 +24,7 @@
     float: left;
     width: 100%;
     padding: 0px;
-    background-color: rgb(200, 219, 238);
+    /* background-color: rgb(200, 219, 238); */
    
 
 }
@@ -32,7 +34,7 @@
     width: 40px;
     height: 40px;
     margin: 5px;
-    margin-top: 48px;
+    margin-top: 57px;
     background-color: rgb(192, 204, 220);
     color: rgb(0, 89, 119);
     border: none;
@@ -41,9 +43,28 @@
     font-size: 25px;
     float: left;
     box-shadow:  3px 3px 3px rgb(186, 189, 192);
-    
-    
 
+}
+
+
+.submitButton{
+    width: 60px;
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 20px;
+    background-color: rgb(192, 204, 220);
+    color: rgb(0, 89, 119);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    float: left;
+    /* box-shadow:  3px 3px 3px rgb(186, 189, 192); */
+
+}
+
+.submitButton:hover{
+    background-color: rgb(135, 223, 181);
 }
 
 .rateButton:hover{
@@ -55,11 +76,10 @@
     /* margin-left: 15px;
     margin-right: 15px; */
     /* float: left; */
-    background-color: rgb(200, 219, 238);
+    /* background-color: rgb(200, 219, 238); */
     border: none;
     color: rgb(13, 40, 70);
-    
-   
+     
 
 }
 
@@ -69,8 +89,8 @@
     box-shadow:  3px 3px 3px rgb(198, 210, 225);
     padding: 10px;
     margin-right: 15px;
-    max-width: 200px;
-    max-height: 130px;
+    max-width: 220px;
+    max-height: 180px;
     display: inline-block;
     /* text-align: left; */
     /* display: flex; */
@@ -79,6 +99,6 @@
     justify-content: center;
     align-self: right;
     float: right;
-    background-color: rgb(200, 219, 238);
+    /* background-color: rgb(200, 219, 238); */
     
 }
