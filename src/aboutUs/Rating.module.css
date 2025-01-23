@@ -1,9 +1,15 @@
+/* .bgcolor{
+    background-color: rgb(200, 219, 238);
+} */
+
+
 .heading{
-    text-align: left;
-    margin-bottom: 10px;
-    padding-left: 40px;
-    font-size: 30px;
-    display: block;
+    /* text-align: left; */
+    color: rgb(1, 72, 95);
+    padding-bottom: 10px;
+    font-size:25px;
+    display: block; 
+    background-color: rgb(200, 219, 238);
 }
 
 
@@ -11,34 +17,68 @@
     text-align: center;
     display: flex;
     /* align-items: center; */
-    /* justify-content: center; */
-    padding-bottom: 20px;
+    justify-content: right;
+    /* margin-right: 50px; */
     float: left;
     width: 100%;
+    padding: 0px;
+    background-color: rgb(200, 219, 238);
+   
 
 }
 
 
 .rateButton{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: 5px;
-    margin-top: 45px;
+    margin-top: 48px;
     background-color: rgb(192, 204, 220);
     color: rgb(0, 89, 119);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 25px;
     float: left;
+    box-shadow:  3px 3px 3px rgb(186, 189, 192);
+    
+    
 
 }
 
+.rateButton:hover{
+    background-color: rgb(186, 191, 199);
+}
+
 .rateDisplay{
-    font-size: 3.5em;
-    margin-left: 15px;
-    margin-right: 15px;
+    font-size: 2.5em;
+    /* margin-left: 15px;
+    margin-right: 15px; */
     /* float: left; */
+    background-color: rgb(200, 219, 238);
+    border: none;
+    color: rgb(13, 40, 70);
+    
    
 
+}
+
+.card{
+    border: 1px solid hs1(0, 0%, 80%);
+    border-radius: 5px;
+    box-shadow:  3px 3px 3px rgb(198, 210, 225);
+    padding: 10px;
+    margin-right: 15px;
+    max-width: 200px;
+    max-height: 130px;
+    display: inline-block;
+    /* text-align: left; */
+    /* display: flex; */
+    /* gap: 16px; */
+    align-items: center;
+    justify-content: center;
+    align-self: right;
+    float: right;
+    background-color: rgb(200, 219, 238);
+    
 }

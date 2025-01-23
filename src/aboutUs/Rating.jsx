@@ -17,14 +17,15 @@ function Rating(){
     }
 
     return(<>
+    <div className={styles.card}>
         <div className={styles.rateContainer}>
             <button className={styles.rateButton} onClick={decrement}>◀</button>
             <div className={styles.centerContent}>
-                <h1>Rate Us</h1>
+                <h2 className={styles.heading}>Rate Us</h2>
                 <p className={styles.rateDisplay}>{rate}</p>
             </div>
             <button className={styles.rateButton} onClick={increment}>▶</button>
-    
+            </div>
     </div>
     </>
 
