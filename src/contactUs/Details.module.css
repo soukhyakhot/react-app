@@ -1,0 +1,32 @@
+
+h2{
+   text-align: center;
+}
+
+h3{
+    color: rgb(1, 72, 95);
+}
+
+p{
+    font-size: 18px;
+}
+
+
+.card{
+    border: 1px solid hs1(0, 0%, 80%);
+    border-radius: 5px;
+    box-shadow:  3px 3px 3px rgb(198, 210, 225);
+    padding: 20px;
+    margin: 15px;
+    width: 395px;
+    height: 90px;
+    display: inline-block;
+    text-align: center;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    align-self: right;
+    float: left;
+    
+}
+

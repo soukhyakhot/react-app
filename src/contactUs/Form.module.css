@@ -1,0 +1,92 @@
+.name {
+    border: 1px solid hs1(0, 0%, 80%);
+    border-radius: 5px;
+    /* box-shadow:  3px 3px 3px rgb(198, 210, 225); */
+    padding: 20px;
+    margin: 15px;
+    width: 600px;
+    height: 8px;
+    display: inline-block;
+    text-align: left;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    align-self: right;
+    float: left;
+    
+}
+
+.telemail{
+    border: 1px solid hs1(0, 0%, 80%);
+    border-radius: 5px;
+    /* box-shadow:  3px 3px 3px rgb(198, 210, 225); */
+    padding: 20px;
+    margin: 15px;
+    width: 264px;
+    height: 8px;
+    display: inline-block;
+    text-align: left;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    align-self: right;
+    float: left;
+    
+
+}
+
+.enquiry{
+    border: 1px solid hs1(0, 0%, 80%);
+    border-radius: 5px;
+    /* box-shadow:  3px 3px 3px rgb(198, 210, 225); */
+    padding: 20px;
+    margin: 15px;
+    width: 600px;
+    height: 100px;
+    display: inline-block;
+    text-align: left;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    align-self: right;
+    float: left;
+
+}
+
+.button{
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border-radius: 3px;
+    background-color: rgb(119, 188, 211);
+    border: 0cap;
+}
+
+.button:hover{
+    
+    background-color: rgb(135, 223, 181);
+ 
+}
+
+
+
+.card{
+    border: 1px solid hs1(0, 0%, 80%);
+    border-radius: 5px;
+    box-shadow:  3px 3px 3px rgb(198, 210, 225);
+    padding: 20px;
+    margin: 15px;
+    width: 50%;
+    height: 500px;
+    display: inline-block;
+    text-align: center;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    align-self: right;
+    float: left;
+    
+}
+
