@@ -1,8 +1,10 @@
+import Details from './Details.jsx'
+
 
 function ContactUs(){
 
     return(
-        <div></div>
+        <Details />
     );
 }
 

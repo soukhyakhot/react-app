@@ -1,24 +1,57 @@
 
-.card{
+.card1{
     border: 1px solid hs1(0, 0%, 80%);
     border-radius: 5px;
     box-shadow:  3px 3px 3px rgb(198, 210, 225);
     padding: 10px;
     margin-right: 15px;
-    max-width: 80%;
+    max-width: 20%;
     height: 180px;
     display: inline-block;
+    text-align: left;
     /* text-align: left; */
     /* display: flex; */
     /* gap: 16px; */
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
     align-self: right;
     float: right;
     
 }
 
+.card2{
+    border: 1px solid hs1(0, 0%, 80%);
+    border-radius: 5px;
+    box-shadow:  3px 3px 3px rgb(198, 210, 225);
+    padding-top: 0;
+    padding: 10px;
+    margin-top:0px;
+    margin-right: 15px;
+    width:800px;
+    height: 180px;
+    display: inline-block;
+    text-align: left;
+    color: rgb(1, 72, 95);
+    
+    /* text-align: left; */
+    /* display: flex; */
+    /* gap: 16px; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    align-self: right;
+    float: right;
+    
+}
+
+
+
 p{
     margin: 2px;
     color: rgb(51, 106, 114);
 }
+
+/* svg {
+    display: flex; 
+    margin-top: 10px; 
+    float: right;
+} */
