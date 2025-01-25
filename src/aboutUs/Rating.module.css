@@ -7,11 +7,12 @@
 .heading{
     /* text-align: left; */
     color: rgb(1, 72, 95);
-    padding-top: 15px;
-    padding-bottom: 10px;
-    font-size:25px;
+    padding-top: none;
+    padding-bottom: 35px;
+    /* font-size:25px; */
     display: block; 
     /* background-color: rgb(200, 219, 238); */
+    margin-right: 12px;
 }
 
 
@@ -23,11 +24,13 @@
     /* margin-right: 50px; */
     float: left;
     width: 100%;
-    padding: 0px;
+    height: 180px;
+    padding-top: 10px;
     /* background-color: rgb(200, 219, 238); */
-   
-
+    margin-right: 15px;
 }
+
+
 
 
 .rateButton{
@@ -43,6 +46,8 @@
     font-size: 25px;
     float: left;
     box-shadow:  3px 3px 3px rgb(186, 189, 192);
+    margin-right: 15px;
+
 
 }
 
@@ -50,8 +55,8 @@
 .submitButton{
     width: 60px;
     height: 30px;
-    margin-top: 15px;
-    margin-left: 20px;
+    margin-top: 30px;
+    margin-left: 5px;
     background-color: rgb(192, 204, 220);
     color: rgb(0, 89, 119);
     border: none;
@@ -73,8 +78,7 @@
 
 .rateDisplay{
     font-size: 2.5em;
-    /* margin-left: 15px;
-    margin-right: 15px; */
+    margin-right: 15px;
     /* float: left; */
     /* background-color: rgb(200, 219, 238); */
     border: none;
@@ -89,15 +93,15 @@
     box-shadow:  3px 3px 3px rgb(198, 210, 225);
     padding: 10px;
     margin-right: 15px;
-    max-width: 220px;
-    max-height: 180px;
+    width: 200px;
+    max-height: 190px;
     display: inline-block;
     /* text-align: left; */
     /* display: flex; */
     /* gap: 16px; */
     align-items: center;
     justify-content: center;
-    align-self: right;
+    align-self: center;
     float: right;
     /* background-color: rgb(200, 219, 238); */
     

@@ -22,7 +22,7 @@ function Rating(){
         <div className={styles.rateContainer}>
             <button className={styles.rateButton} onClick={decrement}>◀</button>
             <div className={styles.centerContent}>
-                <h2 className={styles.heading}>Rate Us</h2>
+                <h3 className={styles.heading}>Rate Us</h3>
                 <p className={styles.rateDisplay}>{rate}</p>
                 <button className={styles.submitButton}>Submit</button>
             </div>

@@ -2,11 +2,11 @@
 .card1{
     border: 1px solid hs1(0, 0%, 80%);
     border-radius: 5px;
-    box-shadow:  3px 3px 3px rgb(198, 210, 225);
-    padding: 10px;
-    margin-right: 15px;
-    max-width: 20%;
-    height: 180px;
+    /* box-shadow:  3px 3px 3px rgb(198, 210, 225); */
+    padding-top: 0px;
+    /* padding-bottom: 10px; */
+    width: 340px;
+    height: 140px;
     display: inline-block;
     text-align: left;
     /* text-align: left; */
@@ -16,21 +16,39 @@
     /* justify-content: center; */
     align-self: right;
     float: right;
-    
+    /* font-size: 1px; */
 }
 
 .card2{
+    border: 1px solid hs1(0, 0%, 80%);
+    border-radius: 5px;
+    /* box-shadow:  3px 3px 3px rgb(198, 210, 225); */
+    padding-top: 0;
+    padding: 10px;
+    margin-top:0px;
+    margin-right: 15px;
+    width:370px;
+    height: 140px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    align-self: left;
+    float: left;
+    
+}
+
+.card{
     border: 1px solid hs1(0, 0%, 80%);
     border-radius: 5px;
     box-shadow:  3px 3px 3px rgb(198, 210, 225);
     padding-top: 0;
     padding: 10px;
     margin-top:0px;
-    margin-right: 15px;
-    width:800px;
-    height: 180px;
+    margin-right: 8px;
+    width:1130px;
+    height: 190px;
     display: inline-block;
-    text-align: left;
+    text-align: center;
     color: rgb(1, 72, 95);
     
     /* text-align: left; */
@@ -43,11 +61,17 @@
     
 }
 
-
+h3{
+    padding: none;
+    margin: none;
+    color: rgb(1, 72, 95);
+}
 
 p{
-    margin: 2px;
+    margin: none;
+    padding: none;
     color: rgb(51, 106, 114);
+    font-size:smaller;
 }
 
 /* svg {

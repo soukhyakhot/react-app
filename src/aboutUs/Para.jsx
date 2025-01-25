@@ -93,13 +93,15 @@ function Para(){
       }, [noOfCustomers]);
     
     return(
-    <>
+    <><div className={styles.card}>
+      <h3>Customer Growth Over Time</h3>
         <div className={styles.card1}>
             <p>We experienced steady growth until 2019, but 2020 saw a sharp decline due to the impact of the COVID-19 pandemic. However, from 2021 onward, there was a strong recovery, with customer numbers surpassing pre-pandemic levels, showcasing the industry's resilience and growing demand for travel.</p>
         </div>
         <div className={styles.card2}>
-            <h3>Customer Growth Over Time</h3>
+            
             <svg ref = {svgRef}></svg>
+        </div>
         </div>
         </>
     )
