@@ -6,6 +6,12 @@ import Andaman from "../assets/Andaman.jpg"
 import Kerala from "../assets/Kerala.jpg"
 import Kashmir from "../assets/Kashmir.jpg"
 import Maharashtra from "../assets/Maharashtra.jpg"
+import Canada from "../assets/Canada.jpg"
+import SouthAmerica from "../assets/SouthAmerica.jpg"
+import Japan from "../assets/Japan.jpg"
+import Egypt from "../assets/Egypt.jpg"
+import Bhutan from "../assets/Bhutan.jpg"
+import Vietnam from "../assets/Vietnam.jpg"
 
 
 
@@ -17,6 +23,11 @@ function Home() {
     { place: "Kerala", img: Kerala, url: "https://www.keralatourism.org/"},
     { place: "Kashmir", img: Kashmir, url: "https://tourism.jk.gov.in/" },
     { place: "Maharashtra", img: Maharashtra, url: "https://maharashtratourism.gov.in/" },
+    { place: "Canada", img: Canada, url: "https://travel.destinationcanada.com/en-gb"},
+    { place: "South America", img: SouthAmerica, url: "https://visitsouthamerica.co/" },
+    { place: "Japan", img: Japan, url: "https://www.japan.travel/en/in/"},
+    { place: "Egypt", img: Egypt, url: "https://www.experienceegypt.eg/en" },
+    { place: "Vietnam", img: Vietnam, url: "https://vietnam.travel/node/1336"},
   ];
 
   return(
