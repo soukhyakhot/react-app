@@ -4,7 +4,7 @@ import styels from "./Wishlist.module.css"
 
 function Wishlist(){
 
-    const [places,setPlaces] = useState(["Kerala","Meghalaya",'Gujarat',"Rajasthan","Karnataka"]);
+    const [places,setPlaces] = useState(["Kerala","Vietnam",'Egypt',"Rajasthan","Canada"]);
 
     function handleAddPlace (){
 

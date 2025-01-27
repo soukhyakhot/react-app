@@ -1,21 +1,21 @@
 import Wishlist from "./Wishlist";
 import Places from "../places/Places.jsx"
 import Canada from "../assets/Canada.jpg"
-import Andaman from "../assets/Andaman.jpg"
-import Kerala from "../assets/Kerala.jpg"
-import Kashmir from "../assets/Kashmir.jpg"
-import Maharashtra from "../assets/Maharashtra.jpg"
-import Gujarat from "../assets/Gujarat.jpg"
+import SouthAmerica from "../assets/SouthAmerica.jpg"
+import Japan from "../assets/Japan.jpg"
+import Egypt from "../assets/Egypt.jpg"
+import Bhutan from "../assets/Bhutan.jpg"
+import Vietnam from "../assets/Vietnam.jpg"
 
 function InternationalTours() {
 
     const placesData = [
         { place: "Canada", img: Canada, url: "https://www.tourism.rajasthan.gov.in/"},
-        { place: "Andaman", img: Andaman, url: "https://www.andamantourism.gov.in/" },
-        { place: "Kerala", img: Kerala, url: "https://www.keralatourism.org/"},
-        { place: "Kashmir", img: Kashmir, url: "https://tourism.jk.gov.in/" },
-        { place: "Maharashtra", img: Maharashtra, url: "https://maharashtratourism.gov.in/" },
-        { place: "Gujarat", img: Gujarat, url: "https://www.gujarattourism.com/"},
+        { place: "SouthAmerica", img: SouthAmerica, url: "https://www.andamantourism.gov.in/" },
+        { place: "Japan", img: Japan, url: "https://www.keralatourism.org/"},
+        { place: "Egypt", img: Egypt, url: "https://tourism.jk.gov.in/" },
+        { place: "Bhutan", img: Bhutan, url: "https://maharashtratourism.gov.in/" },
+        { place: "Vietnam", img: Vietnam, url: "https://www.gujarattourism.com/"},
       ];
   return(
     <>
