@@ -10,12 +10,12 @@ import Vietnam from "../assets/Vietnam.jpg"
 function InternationalTours() {
 
     const placesData = [
-        { place: "Canada", img: Canada, url: "https://www.tourism.rajasthan.gov.in/"},
-        { place: "SouthAmerica", img: SouthAmerica, url: "https://www.andamantourism.gov.in/" },
-        { place: "Japan", img: Japan, url: "https://www.keralatourism.org/"},
-        { place: "Egypt", img: Egypt, url: "https://tourism.jk.gov.in/" },
-        { place: "Bhutan", img: Bhutan, url: "https://maharashtratourism.gov.in/" },
-        { place: "Vietnam", img: Vietnam, url: "https://www.gujarattourism.com/"},
+        { place: "Canada", img: Canada, url: "https://travel.destinationcanada.com/en-gb"},
+        { place: "South America", img: SouthAmerica, url: "https://visitsouthamerica.co/" },
+        { place: "Japan", img: Japan, url: "https://www.japan.travel/en/in/"},
+        { place: "Egypt", img: Egypt, url: "https://www.experienceegypt.eg/en" },
+        { place: "Bhutan", img: Bhutan, url: "https://bhutan.travel/" },
+        { place: "Vietnam", img: Vietnam, url: "https://vietnam.travel/node/1336"},
       ];
   return(
     <>
