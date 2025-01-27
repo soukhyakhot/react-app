@@ -1,4 +1,4 @@
-import travelimg from './TravelImage.jpg' 
+import travelimg from './TravelImage.jpg'
 import styles from './Card.module.css'
 
 function Card(){

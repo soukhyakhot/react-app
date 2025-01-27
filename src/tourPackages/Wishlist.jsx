@@ -4,7 +4,7 @@ import styels from "./Wishlist.module.css"
 
 function Wishlist(){
 
-    const [places,setPlaces] = useState(["Kerala","Meghalaya",'Gujarat']);
+    const [places,setPlaces] = useState(["Kerala","Meghalaya",'Gujarat',"Rajasthan","Karnataka"]);
 
     function handleAddPlace (){
 
@@ -27,7 +27,7 @@ function Wishlist(){
     }
 
     return(
-        <div>
+        <div className={styels.card}>
         <h2>Create Wishlist</h2>
         <input type="text" id="placeInput" placeholder="Enter Place Name" className={styels.inputbar} />
         <button className={styels.btn} onClick={handleAddPlace}>Add Place</button>

@@ -13,6 +13,8 @@ import Testimonials from "./testimonials/Testimonials.jsx";
 import AboutUs from "./aboutUs/AboutUs.jsx";
 import TourPackages from "./tourPackages/TourPackages.jsx";
 import ContactUs from "./contactUs/ContactUs.jsx";
+import DomesticTours from "./tourPackages/DomesticTours.jsx";
+import InternationalTours from "./tourPackages/InternationalTours.jsx";
 
 
 function App() {
@@ -31,7 +33,9 @@ function App() {
                 <Route path="/react-app" element={<Home/>} />
                 <Route path="/testimonials" element={<Testimonials />} />
                 <Route path="/aboutus" element={<AboutUs />} />
-                <Route path="/tourpackages" element={<TourPackages />} />
+                {/* <Route path="/tourpackages" element={<TourPackages />} /> */}
+                <Route path="tourpackages/domestic-tours" element={<DomesticTours />} />
+                <Route path="tourpackages/international-tours" element={<InternationalTours />} />  
                 <Route path="/contactus" element={<ContactUs />} />
             </Routes>
       </Router>
