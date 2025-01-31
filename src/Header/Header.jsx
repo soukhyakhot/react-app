@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Logo from "./Logo.png"
 import styles from './Header.module.css'
 import Login from "./login.png"
+import Person from "../assets/person.png"
 import React, { useState } from "react";
 
 
@@ -73,10 +74,10 @@ function Header(props){
                                 onClick={() => handleNavClick("contactus")}>Contact Us</Link></li>
                 </ul>
             </nav>
-            <div>
+            {/* <div>
             <img className={styles.loginimg} src={Login} alt="Login" />
             {props.isLoggedIn ? welcomeMessage : loginPrompt}
-            </div>
+            </div> */}
         </header>
         </>
     );

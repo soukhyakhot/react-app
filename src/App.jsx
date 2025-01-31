@@ -15,6 +15,7 @@ import TourPackages from "./tourPackages/TourPackages.jsx";
 import ContactUs from "./contactUs/ContactUs.jsx";
 import DomesticTours from "./tourPackages/DomesticTours.jsx";
 import InternationalTours from "./tourPackages/InternationalTours.jsx";
+import LoginSignup from "./loginSignup/LoginSignup.jsx";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
     <>
     <Router>
       <Header isLoggedIn={true} username='Soukhya'/> <Routes>
+                <Route path="/react-app/login-signup" element={<LoginSignup/>} />
                 <Route path="/react-app" element={<Home/>} />
                 <Route path="/testimonials" element={<Testimonials />} />
                 <Route path="/aboutus" element={<AboutUs />} />
