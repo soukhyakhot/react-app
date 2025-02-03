@@ -74,10 +74,10 @@ function Header(props){
                                 onClick={() => handleNavClick("contactus")}>Contact Us</Link></li>
                 </ul>
             </nav>
-            {/* <div>
+            <div>
             <img className={styles.loginimg} src={Login} alt="Login" />
             {props.isLoggedIn ? welcomeMessage : loginPrompt}
-            </div> */}
+            </div>
         </header>
         </>
     );
