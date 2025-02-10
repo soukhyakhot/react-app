@@ -1,53 +1,59 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./Header/Header.jsx"
-import Footer from "./Footer.jsx"
-import Home from "./home/Home.jsx"
-import Card from "./card/Card.jsx"
-import Places from "./places/Places.jsx"
-import Rajasthan from "./assets/Rajasthan.jpg"
-import Andaman from "./assets/Andaman.jpg"
-import Kerala from "./assets/Kerala.jpg"
-import Kashmir from "./assets/Kashmir.jpg"
-import Maharashtra from "./assets/Maharashtra.jpg"
-import Testimonials from "./testimonials/Testimonials.jsx";
-import AboutUs from "./aboutUs/AboutUs.jsx";
-import TourPackages from "./tourPackages/TourPackages.jsx";
-import ContactUs from "./contactUs/ContactUs.jsx";
-import DomesticTours from "./tourPackages/DomesticTours.jsx";
-import InternationalTours from "./tourPackages/InternationalTours.jsx";
-import LoginSignup from "./loginSignup/LoginSignup.jsx";
-
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import ProtectedLayout from './ProtectedLayout';
+import Home from './home/Home.jsx';
+import Testimonials from './testimonials/Testimonials.jsx';
+import AboutUs from './aboutUs/AboutUs.jsx';
+import ContactUs from './contactUs/ContactUs.jsx';
+import DomesticTours from './tourPackages/DomesticTours.jsx';
+import InternationalTours from './tourPackages/InternationalTours.jsx';
+import LoginSignup from './loginSignup/LoginSignup.jsx';
+import ProtectedRoute from './ProtectedRoute';
 
 function App() {
-  const placesData = [
-    { place: "Rajasthan", img: Rajasthan, url: "https://www.tourism.rajasthan.gov.in/"},
-    { place: "Andaman", img: Andaman, url: "https://www.andamantourism.gov.in/" },
-    { place: "Kerala", img: Kerala, url: "https://www.keralatourism.org/"},
-    { place: "Kashmir", img: Kashmir, url: "https://tourism.jk.gov.in/" },
-    { place: "Maharashtra", img: Maharashtra, url: "https://maharashtratourism.gov.in/" },
-  ];
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  return(
-    <>
+  useEffect(() => {
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      setIsAuthenticated(true);
+    }
+  }, []);
+
+  return (
     <Router>
-      <Header isLoggedIn={true} username='Soukhya'/> <Routes>
-                <Route path="/react-app/login-signup" element={<LoginSignup/>} />
-                <Route path="/react-app" element={<Home/>} />
-                <Route path="/testimonials" element={<Testimonials />} />
-                <Route path="/aboutus" element={<AboutUs />} />
-                {/* <Route path="/tourpackages" element={<TourPackages />} /> */}
-                <Route path="tourpackages/domestic-tours" element={<DomesticTours />} />
-                <Route path="tourpackages/international-tours" element={<InternationalTours />} />  
-                <Route path="/contactus" element={<ContactUs />} />
-            </Routes>
-      </Router>
-      
-      <Footer/>
-    </>
-  )
+      <Routes>
+        <Route
+          path="/"
+          element={
+            isAuthenticated ? (
+              <Navigate to="/react-app" replace />
+            ) : (
+              <Navigate to="/login-signup" replace />
+            )
+          }
+        />
+        <Route
+          path="/login-signup"
+          element={<LoginSignup setIsAuthenticated={setIsAuthenticated} />}
+        />
+        <Route
+          element={
+            <ProtectedRoute isAuthenticated={isAuthenticated}>
+              <ProtectedLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route path="/react-app" element={<Home />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/tourpackages/domestic-tours" element={<DomesticTours />} />
+          <Route path="/tourpackages/international-tours" element={<InternationalTours />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
+}
 
-
-};
-
-export default App
- 
+export default App;

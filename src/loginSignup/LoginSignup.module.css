@@ -6,6 +6,9 @@
  /* background: #fff; */
  padding-bottom: 20px;
  width: 600px;
+ /* border: 1px solid hs1(0, 0%, 80%);
+ border-radius: 20px;
+ box-shadow:  3px 3px 3px rgb(198, 210, 225); */
 
 }
 
@@ -19,8 +22,20 @@
 
 }
 
+.logo{
+    width: 150px;
+    height: 150px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 225px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
 .text{
-    color: rgb(49, 66, 90);
+    color: rgb(0, 89, 140);
     font-size: 30px;
     font-weight: bold;
 }
@@ -86,7 +101,7 @@
     cursor: pointer;
 }
 
-.submitgray{
+.switchAction{
     display:flex;
     justify-content: center;
     align-items: center;
