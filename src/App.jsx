@@ -12,11 +12,15 @@ import ProtectedRoute from './ProtectedRoute';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [username, setUsername] = useState("");
 
   useEffect(() => {
     const token = localStorage.getItem('authToken');
+    const storedUsername = localStorage.getItem("username");
+
     if (token) {
       setIsAuthenticated(true);
+      setUsername(storedUsername || "User");
     }
   }, []);
 
@@ -35,12 +39,12 @@ function App() {
         />
         <Route
           path="/login-signup"
-          element={<LoginSignup setIsAuthenticated={setIsAuthenticated} />}
+          element={<LoginSignup setIsAuthenticated={setIsAuthenticated} setUsername={setUsername}/>}
         />
         <Route
           element={
             <ProtectedRoute isAuthenticated={isAuthenticated}>
-              <ProtectedLayout />
+              <ProtectedLayout isAuthenticated={isAuthenticated} username={username}/>
             </ProtectedRoute>
           }
         >

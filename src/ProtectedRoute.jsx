@@ -4,7 +4,8 @@ const ProtectedRoute = ({ isAuthenticated, children }) => {
   if (!isAuthenticated) {
     return <Navigate to="/login-signup" replace />;
   }
-  return children;
+  return <>{children}</>;
 };
 
 export default ProtectedRoute;
+

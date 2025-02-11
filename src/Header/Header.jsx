@@ -6,8 +6,8 @@ import Person from "../assets/person.png"
 import React, { useState } from "react";
 
 
-
-function Header(props){
+//props
+function Header({ isAuthenticated, username }){
     
     const [activePage, setActivePage] = useState("home");
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -20,7 +20,7 @@ function Header(props){
         setIsDropdownOpen(prev=> !prev);
       };
     
-    const welcomeMessage = <p className = {styles.welcomemsg}>Welcome {props.username}!</p>
+    const welcomeMessage = <p className = {styles.welcomemsg}>Welcome {username}!</p>
     
     const loginPrompt = <p className = {styles.welcomemsg}>Login</p>
 
@@ -74,12 +74,14 @@ function Header(props){
                                 onClick={() => handleNavClick("contactus")}>Contact Us</Link></li>
                 </ul>
             </nav>
-            <div>
+            <div className ={styles.container}>
             <img className={styles.loginimg} src={Login} alt="Login" />
-            {props.isLoggedIn ? welcomeMessage : loginPrompt}
+            {/* {props.isLoggedIn ? welcomeMessage : loginPrompt} */}
+            {isAuthenticated ? welcomeMessage : loginPrompt}
             </div>
         </header>
         </>
+      
     );
 
 }

@@ -7,7 +7,7 @@ import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import Logo from "../Header/Logo.png"
 
-function LoginSignup({setIsAuthenticated}) {
+function LoginSignup({setIsAuthenticated, setUsername }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -29,10 +29,17 @@ function LoginSignup({setIsAuthenticated}) {
         const data = { EmailId: email, Password: password };
         axios.post("https://localhost:7066/api/Registration/login", data, { headers: { "Content-Type": "application/json" } })
             .then((response) => {
-                alert("Login successful!");
-                localStorage.setItem("authToken", response.data.token); // Store auth token
+                console.log("Login Response:", response.data); // Debugging
+                if (!response.data.username) {
+                    alert("Error: Username missing in API response.");
+                    return;
+                }
+
+                localStorage.setItem("authToken", response.data.token);
+                localStorage.setItem("username", response.data.username);
                 setIsAuthenticated(true);
-                navigate("/react-app"); // Redirect to dashboard
+                setUsername(response.data.username);
+                navigate("/react-app");
             })
             .catch((error) => {
                 alert("Login failed: " + error);
