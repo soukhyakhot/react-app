@@ -25,9 +25,9 @@ function LoginSignup({setIsAuthenticated, setUsername }) {
             });
     };
 
-    const handleLogin = () => {
+    const handleLogin = async () => {
         const data = { EmailId: email, Password: password };
-        axios.post("https://localhost:7066/api/Registration/login", data, { headers: { "Content-Type": "application/json" } })
+        await axios.post("https://localhost:7066/api/Registration/login", data, { headers: { "Content-Type": "application/json" } })
             .then((response) => {
                 console.log("Login Response:", response.data); // Debugging
                 if (!response.data.username) {
@@ -37,9 +37,11 @@ function LoginSignup({setIsAuthenticated, setUsername }) {
 
                 localStorage.setItem("authToken", response.data.token);
                 localStorage.setItem("username", response.data.username);
+                localStorage.setItem("email", email);
                 setIsAuthenticated(true);
                 setUsername(response.data.username);
                 navigate("/react-app");
+
             })
             .catch((error) => {
                 alert("Login failed: " + error);

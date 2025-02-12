@@ -118,6 +118,7 @@
     border: 1px solid hs1(0, 0%, 80%);
     padding: 10px;
     margin-left: 150px;
+    margin-right: none;
     margin-bottom: 10px;
     width: auto;
     max-height: auto;
@@ -131,3 +132,5 @@
     /* float: left; */
    
    }
+
+   
