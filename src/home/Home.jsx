@@ -1,4 +1,3 @@
-
 import Card from "../card/Card.jsx"
 import Places from "../places/Places.jsx"
 import Rajasthan from "../assets/Rajasthan.jpg"
@@ -12,9 +11,6 @@ import Japan from "../assets/Japan.jpg"
 import Egypt from "../assets/Egypt.jpg"
 import Bhutan from "../assets/Bhutan.jpg"
 import Vietnam from "../assets/Vietnam.jpg"
-
-
-
 
 function Home() {
   const placesData = [
@@ -33,26 +29,40 @@ function Home() {
   return(
     <> 
       <Card/>
-      <div style={styles.cardContainer}>
-        {placesData.map((place, index) => (
-          <Places key={index} place={place.place} img={place.img} url={place.url}/>
-        ))}
+      <div style={styles.wrapper}>
+        <div style={styles.cardContainer}>
+          {placesData.map((place, index) => (
+            <Places key={index} place={place.place} img={place.img} url={place.url}/>
+          ))}
+          {/* Duplicate the places for seamless looping */}
+          {placesData.map((place, index) => (
+            <Places key={index + placesData.length} place={place.place} img={place.img} url={place.url}/>
+          ))}
+        </div>
       </div>
     </>
-  )
-
-
+  );
 }
 
 const styles = {
+  wrapper: {
+    overflow: "hidden", // Hide the overflow to keep it inside the visible area
+    width: "100%", // Full width of the screen
+  },
   cardContainer: {
     display: "flex",
-    // gap: "16px",
-    justifyContent: "center",
-    flexWrap: "wrap", // Allows wrapping on smaller screens
-    marginTop: "20px",
+    justifyContent: "flex-start", // Align the places to the start of the container
+    animation: "moveLeftToRight 20s linear infinite", // Apply animation
   },
 };
 
-export default Home
- 
+// Add the animation keyframes
+const styleSheet = document.styleSheets[0];
+styleSheet.insertRule(`
+  @keyframes moveLeftToRight {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0%); } /* Move the container to the left by 50% */
+  }
+`, styleSheet.cssRules.length);
+
+export default Home;

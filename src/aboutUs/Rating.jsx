@@ -47,6 +47,8 @@ function Rating(){
                 alert(`Unexpected Error: ${error.message}`);
             }
         }
+
+        setRate(10)
     };
 
     return(<>

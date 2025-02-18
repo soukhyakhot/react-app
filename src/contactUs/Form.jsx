@@ -20,6 +20,10 @@ function Form(){
             .catch((error) => {
                 alert("Enquiry request failed!" + error);
             });
+
+    // Clear input fields after submission
+    setMobileNo("");
+    setEnquiry("");
     };
 
     return(
