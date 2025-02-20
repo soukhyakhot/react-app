@@ -114,3 +114,12 @@
     cursor: pointer;
     background-color: rgb(156, 156, 156);
 }
+
+.error {
+    color: red;
+    font-size: 12px;
+    /* margin-top: 5px; */
+    text-align: left;
+    background-color: rgb(207, 207, 207);
+    
+}

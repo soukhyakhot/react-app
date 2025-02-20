@@ -6,22 +6,39 @@ import React, { useState } from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import Logo from "../Header/Logo.png"
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
+
 
 function LoginSignup({setIsAuthenticated, setUsername }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [action, setAction] = useState("Sign Up");
+    const [errors, setErrors] = useState({});
     const navigate = useNavigate();
 
     const handleSignUp = () => {
+        // setErrors({});
         const data = { UserName: name, EmailId: email, Password: password, IsActive: 1 };
         axios.post("https://localhost:7066/api/Registration/registration", data)
             .then((result) => {
-                alert("Registration successful!");
+                // alert("Registration successful!");
+                toast.success("Registration successful!");
             })
             .catch((error) => {
-                alert("Registration failed: " + error);
+                if (error.response && error.response.status === 400) {
+                    
+                    const errors = error.response.data.errors || {}; 
+                    
+                    Object.keys(errors).forEach((key) => {
+                        toast.error(errors[key][0]); // Display each error
+                    });
+                } else {
+                    toast.error("Registration failed: " + (error.response?.data?.message || error.message));
+                }
             });
     };
 
@@ -44,13 +61,22 @@ function LoginSignup({setIsAuthenticated, setUsername }) {
 
             })
             .catch((error) => {
-                alert("Login failed: " + error);
+                if (error.response && error.response.status === 400) {
+                    
+                    const errors = error.response.data.errors || {}; 
+                    
+                    Object.keys(errors).forEach((key) => {
+                        toast.error(errors[key][0]); // Display each error
+                    });
+                } else {
+                    toast.error("Login failed: " + (error.response?.data?.message || error.message));
+                }
             });
     };
 
     return (
         <>
-        
+        <ToastContainer position="top-right" autoClose={3000} />
         <div className={styles.container}>
         <img src={Logo} className={styles.logo} alt='AtoZ Travles Logo' />
         <h1>Welcome to AtoZ Travels!</h1>
@@ -60,6 +86,7 @@ function LoginSignup({setIsAuthenticated, setUsername }) {
                     <div className={styles.input}>
                         <img src={Person} alt='Person Icon' />
                         <input type='text' placeholder='Name' onChange={(e) => setName(e.target.value)} required />
+                        {/* {errors.UserName && <p className={styles.error}>{errors.UserName[0]}</p>} */}
                     </div>
                 )}
                 <div className={styles.input}>
@@ -69,6 +96,7 @@ function LoginSignup({setIsAuthenticated, setUsername }) {
                 <div className={styles.input}>
                     <img src={Password} alt='Password Icon' />
                     <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)} required />
+                    {/* {errors.Password && <p className={styles.error}>{errors.Password[0]}</p>} */}
                 </div>
             </div>
             <div className={styles.submitcontainer}>
