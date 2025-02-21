@@ -4,6 +4,7 @@ import styles from "./Rating.module.css";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 function Rating(){
 
     const [rate, setRate] = useState(10);

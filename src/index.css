@@ -11,3 +11,18 @@
 }
 
 
+.Toastify__toast {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.Toastify__toast--error {
+  background-color: #ff4d4d; /* Red background for errors */
+  /* color: white; */
+  font-variant: #ff4d4d;
+}
+
+.Toastify__toast--success {
+  background-color: #28a745; /* Green background for success */
+  font-variant: #28a745;
+}
