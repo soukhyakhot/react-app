@@ -90,7 +90,7 @@ function LoginSignup({setIsAuthenticated, setUsername }) {
 
     return (
         <>
-        <ToastContainer position="top-center" autoClose={3000} />
+        <ToastContainer position="top-center" autoClose={1000} />
         <div className={styles.container}>
         <img src={Logo} className={styles.logo} alt='AtoZ Travles Logo' />
         <h1>Welcome to AtoZ Travels!</h1>

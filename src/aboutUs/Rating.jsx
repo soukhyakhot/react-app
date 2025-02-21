@@ -43,7 +43,7 @@ function Rating(){
     };
 
     return(<>
-    <ToastContainer position="top-center" autoClose={3000} />
+    <ToastContainer position="top-center" autoClose={1000} />
     <div className={styles.card}>
         <div className={styles.rateContainer}>
             <button className={styles.rateButton} onClick={decrement}>◀</button>

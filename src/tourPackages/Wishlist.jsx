@@ -91,7 +91,7 @@ function Wishlist(){
 
     return(
         <>
-        <ToastContainer position="top-center" autoClose={3000} />
+        <ToastContainer position="top-center" autoClose={1000} />
         <div className={styles.card}>
         <h2>Create Wishlist</h2>
         <input
