@@ -115,11 +115,14 @@
     background-color: rgb(156, 156, 156);
 }
 
-.error {
-    color: red;
-    font-size: 12px;
-    /* margin-top: 5px; */
-    text-align: left;
-    background-color: rgb(207, 207, 207);
-    
+.Toastify__toast {
+    font-size: 14px;
+    font-weight: bold;
+}
+.Toastify__toast--error {
+    background-color: #ff4d4d; /* Red background for errors */
+    color: white;
+}
+.Toastify__toast--success {
+    background-color: #28a745; /* Green background for success */
 }

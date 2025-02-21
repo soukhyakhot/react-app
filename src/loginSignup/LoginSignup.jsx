@@ -29,15 +29,22 @@ function LoginSignup({setIsAuthenticated, setUsername }) {
                 toast.success("Registration successful!");
             })
             .catch((error) => {
-                if (error.response && error.response.status === 400) {
-                    
-                    const errors = error.response.data.errors || {}; 
-                    
-                    Object.keys(errors).forEach((key) => {
-                        toast.error(errors[key][0]); // Display each error
-                    });
+                if (error.response) {
+                    const status = error.response.status;
+                    const responseData = error.response.data;
+    
+                    // Handle validation errors (400 status with specific errors)
+                    if (status === 400 && responseData.errors) {
+                        Object.keys(responseData.errors).forEach((key) => {
+                            toast.error(responseData.errors[key][0]); // Show each validation error
+                        });
+                    } else {
+                        // Show general error message
+                        const errorMessage = responseData.message || "Registration failed!";
+                        toast.error(errorMessage);
+                    }
                 } else {
-                    toast.error("Registration failed: " + (error.response?.data?.message || error.message));
+                    toast.error("Something went wrong. Please try again.");
                 }
             });
     };
@@ -61,15 +68,22 @@ function LoginSignup({setIsAuthenticated, setUsername }) {
 
             })
             .catch((error) => {
-                if (error.response && error.response.status === 400) {
-                    
-                    const errors = error.response.data.errors || {}; 
-                    
-                    Object.keys(errors).forEach((key) => {
-                        toast.error(errors[key][0]); // Display each error
-                    });
+                if (error.response) {
+                    const status = error.response.status;
+                    const responseData = error.response.data;
+    
+                    // Handle validation errors (400 status with specific errors)
+                    if (status === 400 && responseData.errors) {
+                        Object.keys(responseData.errors).forEach((key) => {
+                            toast.error(responseData.errors[key][0]); // Show each validation error
+                        });
+                    } else {
+                        // Show general error message
+                        const errorMessage = responseData.message || "Login failed!";
+                        toast.error(errorMessage);
+                    }
                 } else {
-                    toast.error("Login failed: " + (error.response?.data?.message || error.message));
+                    toast.error("Something went wrong. Please try again.");
                 }
             });
     };
