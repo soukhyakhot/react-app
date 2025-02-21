@@ -17,7 +17,7 @@ function LoginSignup({setIsAuthenticated, setUsername }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [action, setAction] = useState("Sign Up");
-    const [errors, setErrors] = useState({});
+    // const [errors, setErrors] = useState({});
     const navigate = useNavigate();
 
     const handleSignUp = () => {
@@ -90,7 +90,7 @@ function LoginSignup({setIsAuthenticated, setUsername }) {
 
     return (
         <>
-        <ToastContainer position="top-right" autoClose={3000} />
+        <ToastContainer position="top-center" autoClose={3000} />
         <div className={styles.container}>
         <img src={Logo} className={styles.logo} alt='AtoZ Travles Logo' />
         <h1>Welcome to AtoZ Travels!</h1>
