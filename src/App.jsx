@@ -17,12 +17,15 @@ function App() {
   useEffect(() => {
     const token = localStorage.getItem('authToken');
     const storedUsername = localStorage.getItem("username");
-
-    if (token) {
+  
+    if (token && storedUsername) {
       setIsAuthenticated(true);
-      setUsername(storedUsername || "User");
+      setUsername(storedUsername);
+    } else {
+      setIsAuthenticated(false);
+      setUsername("");
     }
-  }, []);
+  }, [isAuthenticated]);
 
   return (
     <Router>
