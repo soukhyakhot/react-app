@@ -9,7 +9,7 @@ import React, { useState } from "react";
 //props
 function Header({ isAuthenticated, username }){
     
-    const [activePage, setActivePage] = useState("home");
+    const [activePage, setActivePage] = useState('home');
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     
     const handleNavClick = (page) => {
@@ -30,7 +30,7 @@ function Header({ isAuthenticated, username }){
             <h1><img className={styles.imglogo} src={Logo}></img></h1>
             <nav className={styles.navbar}>
                 <ul>
-                    <li><Link to="/react-app"  className={activePage === "home" ? styles.active : ""}
+                    <li><Link to="/home"  className={activePage === "home" ? styles.active : ""}
                                 onClick={() => handleNavClick("home")}>Home</Link></li>
                     <li><Link to="/aboutus" className={activePage === "aboutus" ? styles.active : ""}
                                 onClick={() => handleNavClick("aboutus")}>About Us</Link></li>

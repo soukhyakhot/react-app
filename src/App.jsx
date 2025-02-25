@@ -28,13 +28,13 @@ function App() {
   }, [isAuthenticated]);
 
   return (
-    <Router>
+    <Router basename="/react-app">
       <Routes>
         <Route
-          path="/"
+          path="/*"
           element={
             isAuthenticated ? (
-              <Navigate to="/react-app" replace />
+              <Navigate to="/home" replace />
             ) : (
               <Navigate to="/login-signup" replace />
             )
@@ -51,7 +51,7 @@ function App() {
             </ProtectedRoute>
           }
         >
-          <Route path="/react-app" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contactus" element={<ContactUs />} />
