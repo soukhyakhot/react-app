@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter  as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import ProtectedLayout from './ProtectedLayout';
 import Home from './home/Home.jsx';
@@ -29,10 +29,10 @@ function App() {
   }, [isAuthenticated]);
 
   return (
-    <Router>
+    <Router >
       <Routes>
         <Route
-          path="/"
+          path="/*"
           element={
             isAuthenticated ? (
               <Navigate to="/home" replace />
