@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import ProtectedLayout from './ProtectedLayout';
 import Home from './home/Home.jsx';
@@ -29,7 +29,7 @@ function App() {
   }, [isAuthenticated]);
 
   return (
-    <Router basename={import.meta.env.BASE_URL || "/"}>
+    <Router>
       <Routes>
         <Route
           path="/"
