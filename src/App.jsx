@@ -28,10 +28,10 @@ function App() {
   }, [isAuthenticated]);
 
   return (
-    <Router basename="/react-app">
+    <Router basename={import.meta.env.BASE_URL || "/"}>
       <Routes>
         <Route
-          path="/*"
+          path="/"
           element={
             isAuthenticated ? (
               <Navigate to="/home" replace />
@@ -42,12 +42,12 @@ function App() {
         />
         <Route
           path="/login-signup"
-          element={<LoginSignup setIsAuthenticated={setIsAuthenticated} setUsername={setUsername}/>}
+          element={<LoginSignup setIsAuthenticated={setIsAuthenticated} setUsername={setUsername} />}
         />
         <Route
           element={
             <ProtectedRoute isAuthenticated={isAuthenticated}>
-              <ProtectedLayout isAuthenticated={isAuthenticated} username={username}/>
+              <ProtectedLayout isAuthenticated={isAuthenticated} username={username} />
             </ProtectedRoute>
           }
         >
