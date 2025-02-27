@@ -12,7 +12,7 @@ import ProtectedRoute from './ProtectedRoute';
 
 // 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem("authToken"));
   const [username, setUsername] = useState("");
 
   useEffect(() => {
@@ -48,7 +48,7 @@ function App() {
         <Route
           element={
             <ProtectedRoute isAuthenticated={isAuthenticated}>
-              <ProtectedLayout isAuthenticated={isAuthenticated} username={username} />
+              <ProtectedLayout isAuthenticated={isAuthenticated} username={username} setIsAuthenticated={setIsAuthenticated} />
             </ProtectedRoute>
           }
         >

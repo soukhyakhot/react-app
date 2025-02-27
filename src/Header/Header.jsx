@@ -1,17 +1,17 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Logo from "./Logo.png";
 import styles from './Header.module.css';
 import Login from "./login.png";
-import Person from "../assets/person.png";
+import LogoutIcon from "../assets/logout.png"; // Assuming you have a logout icon
 import React, { useState, useEffect } from "react";
 
-function Header({ isAuthenticated, username }) {
+function Header({ isAuthenticated, username, setIsAuthenticated }) {
     const location = useLocation(); 
+    const navigate = useNavigate();
     const [activePage, setActivePage] = useState(localStorage.getItem("activePage") || location.pathname);
-
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [showLogoutPopup, setShowLogoutPopup] = useState(false);
 
-    // Storing activePage in localStorage
     useEffect(() => {
         localStorage.setItem("activePage", activePage);
     }, [activePage]);
@@ -29,8 +29,11 @@ function Header({ isAuthenticated, username }) {
         setIsDropdownOpen(prev => !prev);
     };
 
-    const welcomeMessage = <p className={styles.welcomemsg}>Welcome {username}!</p>;
-    const loginPrompt = <p className={styles.welcomemsg}>Login</p>;
+    const handleLogout = () => {
+        localStorage.removeItem("authToken"); // Clear token
+        setIsAuthenticated(false); // Update auth state
+        navigate("/login-signup"); // Redirect to login page
+    };
 
     return (
         <>
@@ -52,13 +55,30 @@ function Header({ isAuthenticated, username }) {
                         <li><Link target="_blank" to="https://www.goindigo.in/">Air Tickets</Link></li>
                         <li><Link to="/testimonials" className={activePage === "/testimonials" ? styles.active : ""} onClick={() => handleNavClick("/testimonials")}>Testimonials</Link></li>
                         <li><Link to="/contactus" className={activePage === "/contactus" ? styles.active : ""} onClick={() => handleNavClick("/contactus")}>Contact Us</Link></li>
+                        {isAuthenticated && (
+                            <li>
+                                <button className={styles.logoutBtn} onClick={() => setShowLogoutPopup(true)}>
+                                    <img src={LogoutIcon} alt="Logout" className={styles.logoutIcon} />
+                                </button>
+                            </li>
+                        )}
                     </ul>
                 </nav>
                 <div className={styles.container}>
                     <img className={styles.loginimg} src={Login} alt="Login" />
-                    {isAuthenticated ? welcomeMessage : loginPrompt}
+                    {isAuthenticated ? <p className={styles.welcomemsg}>Welcome {username}!</p> : <p className={styles.welcomemsg}>Login</p>}
                 </div>
             </header>
+
+            {showLogoutPopup && (
+                <div className={styles.popupOverlay}>
+                    <div className={styles.popup}>
+                        <p>Do you want to logout?</p>
+                        <button className={styles.yesBtn} onClick={handleLogout}>Yes</button>
+                        <button className={styles.noBtn} onClick={() => setShowLogoutPopup(false)}>No</button>
+                    </div>
+                </div>
+            )}
         </>
     );
 }
