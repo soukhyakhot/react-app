@@ -1,13 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="./src/Header/Logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AtoZ Travels</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AtoZ Travels - Your ultimate travel partner. Book flights, hotels, and explore amazing destinations with us." />
+  <meta name="keywords" content="travel, flights, hotels, vacation, AtoZ Travels" />
+  <meta name="author" content="AtoZ Travels" />
+  
+  <!-- Open Graph Meta Tags (for social media sharing) -->
+  <meta property="og:title" content="AtoZ Travels - Explore the World" />
+  <meta property="og:description" content="Plan your perfect trip with AtoZ Travels. Find the best deals on flights and hotels!" />
+  <meta property="og:image" content="/public/travel-banner.jpg" />
+  <meta property="og:url" content="https://atoztravels.com" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/public/favicon.png" />
+  
+  <title>AtoZ Travels - Your Journey Begins Here</title>
+
+  <!-- Preload Fonts (for better performance) -->
+  <link rel="preload" href="/public/fonts/custom-font.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
+  <!-- Preload Logo (to avoid flashing) -->
+  <link rel="preload" href="/public/logo.png" as="image" />
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
 </html>
