@@ -66,7 +66,8 @@ function Header({ isAuthenticated, username, setIsAuthenticated }) {
                 </nav>
                 <div className={styles.container}>
                     <img className={styles.loginimg} src={Login} alt="Login" />
-                    {isAuthenticated ? <p className={styles.welcomemsg}>Welcome {username}!</p> : <p className={styles.welcomemsg}>Login</p>}
+                    <p className={styles.welcomemsg}>Welcome </p>
+                    {isAuthenticated ? <p className={styles.welcomemsg}>{username}!</p> : <p className={styles.welcomemsg}>Login</p>}
                 </div>
             </header>
 
