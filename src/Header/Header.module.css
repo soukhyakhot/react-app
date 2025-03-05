@@ -27,19 +27,15 @@
 
 .navbar ul{
     list-style-type: none;
-    /* background-color:rgb(129, 174, 211); */
-    /* padding: 20px; */
     margin: 20px;
     display: flex;
     gap: 16px;
-    /* overflow: hidden; */
     
 }
 
 .navbar a{
     text-decoration: none;
     padding: 10px 20px;
-    /* padding-left: 10px; */
     margin-bottom: 0px;
     display: block;
     border-radius: 3px;
@@ -52,8 +48,6 @@
 
 .navbar li{
     float: left;
-    /* size: 20px; */
-    /* font-size: 18px; */
 }
 
 .navbar a:hover{
@@ -63,9 +57,7 @@
 .loginimg{
     width: 38px;
     height: 38px;
-    /* padding-left: 150px; */
     color: rgb(0, 89, 119);
-    /* align-self: center; */
     
 
 }
@@ -76,19 +68,10 @@
 
 }
 
-/* .welcomemsg{
-    font-size: 20px;
-    color: rgb(49, 66, 90);
-    display:inline-block;
-    text-align:center;
-    justify-content: center;
-    align-items: center;
-} */
+
 
 .navbar .active {
-    /* background-color: rgba(115, 178, 250, 0.68); */
     color: rgb(3, 28, 37); /* Text color for highlighted item */
-    /* text-underline-position: auto; */
     font-weight: bold;
 }
 
